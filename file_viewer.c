@@ -3,6 +3,8 @@
 
 /*This program is a typical file viewer application that is used in Unix/Linux terminals
   Gives a readout of the text of the document as well as a character and word count.
+  When you compile the program give the path to the text file you want to view as the argument.
+  For example ./file.out text_file
 */
 int main(int argc, char *argv[])  // argc is 1 by defalt and is the program name stored in argv
 {
@@ -12,7 +14,7 @@ int main(int argc, char *argv[])  // argc is 1 by defalt and is the program name
 
     if(argc != 2)
     {
-        printf("usage: %s filename\n", argv[0]);
+        printf("Program requiers exactly one argument\n);
         exit(1);
     }
     if ((file_pointer = fopen(argv[1], "r")) == NULL)
